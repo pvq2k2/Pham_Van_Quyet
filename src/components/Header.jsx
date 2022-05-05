@@ -9,7 +9,7 @@ const Header = () => {
 <header id="header">
 <div className="fixed right-0 left-0 z-[1030] bg-slate-50 dark:bg-[#1F2235] transition duration-500">
   <div className="flex justify-between mx-auto px-4 xl:w-[1200px]">
-    <div className="logo h-[50px] px-1 sm:px-4 pt-3">
+    <div className="logo h-[50px] pt-3 sm:pt-7">
     <Link to="/" >
     <p className="
     sm:text-[30px]
@@ -45,8 +45,8 @@ const Header = () => {
     )}
   </div>
     <div className={navToggle
-    ? "fixed top-[50px] right-[-100%] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#1F2235] transition-all duration-500 shadow-lg"
-    : "fixed top-[50px] right-[0] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#1F2235] transition-all duration-500 shadow-lg"}>
+    ? "fixed top-[50px] right-[-100%] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#0b0d15] transition-all duration-500 shadow-lg"
+    : "fixed top-[50px] right-[0] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#0b0d15] transition-all duration-500 shadow-lg"}>
       <ul className="nav navbar-nav navbar-right">
         <li className="block relative after:content-[] after:absolute after:left-0 after:top-8 after:h-2 after:bg-[#3e6ff4]"><NavLink to="#home"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></NavLink></li>
         <li className="block"><NavLink to="#about"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></NavLink></li>
@@ -58,7 +58,7 @@ const Header = () => {
       </div>
   </div>
 </div>
-    <div id="navbar" className="my-2 mr-4 hidden sm:flex">
+    <div id="navbar" className="sm:my-5 mr-4 hidden sm:flex">
       <ul className="nav navbar-nav navbar-right inline-block">
         <li className="relative inline-block"><NavLink to="#home"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></NavLink></li>
         <li className="relative inline-block"><NavLink to="#about"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></NavLink></li>
