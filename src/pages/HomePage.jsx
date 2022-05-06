@@ -1,14 +1,14 @@
 import React from 'react'
+import About from '../components/About'
 import Header from '../components/Header'
 import Home from '../components/Home'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="h-screen">
         <Header />
-        <main className="h-screen bg-slate-50 dark:bg-[#1F2235] transition duration-500">
-          <Home />
-        </main>
+        <Home />
+        <About />
     </div>
   )
 }

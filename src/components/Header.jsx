@@ -5,6 +5,12 @@ import useDarkMode from '../hook/useDarkMode'
 const Header = () => {
   const [colorTheme, setTheme] = useDarkMode();
   const [navToggle, setNavToggle] = useState(true);
+  /*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav__link')
+function linkAction(){
+  setNavToggle(!navToggle)
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
   return (
 <header id="header">
 <div className="fixed right-0 left-0 z-[1030] bg-slate-50 dark:bg-[#1F2235] transition duration-500">
@@ -44,27 +50,31 @@ const Header = () => {
 
     )}
   </div>
+  <div className={navToggle 
+  ? "lg:hidden xl:hidden invisible fixed top-[50px] right-0 left-0 bottom-0 bg-black/30 z-20"
+  : "lg:hidden xl:hidden visible fixed top-[50px] right-0 left-0 bottom-0 bg-black/30 z-20"} onClick={() => setNavToggle(!navToggle)}>
     <div className={navToggle
     ? "fixed top-[50px] right-[-100%] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#0b0d15] transition-all duration-500 shadow-lg"
     : "fixed top-[50px] right-[0] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#0b0d15] transition-all duration-500 shadow-lg"}>
       <ul className="nav navbar-nav navbar-right">
-        <li className="block relative after:content-[] after:absolute after:left-0 after:top-8 after:h-2 after:bg-[#3e6ff4]"><NavLink to="#home"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></NavLink></li>
-        <li className="block"><NavLink to="#about"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></NavLink></li>
-        <li className="block"><NavLink to="#skill"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Skill</p></NavLink></li>
-        <li className="block"><NavLink to="#portfolio"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Portfolio</p></NavLink></li>																				
-        <li className="block"><NavLink to="#contact"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Contact</p></NavLink></li>
+        <li className="nav__menu block relative"><a href="#home" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></a></li>
+        <li className="nav__menu block relative"><a href="#about" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></a></li>
+        <li className="nav__menu block relative"><a to="#skill" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Skill</p></a></li>
+        <li className="nav__menu block relative"><a to="#portfolio" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Portfolio</p></a></li>																				
+        <li className="nav__menu block relative"><a to="#contact" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Contact</p></a></li>
       </ul>
           </div>
+    </div>
       </div>
   </div>
 </div>
-    <div id="navbar" className="sm:my-5 mr-4 hidden sm:flex">
+    <div id="nav__menu" className="sm:my-5 mr-4 hidden sm:flex">
       <ul className="nav navbar-nav navbar-right inline-block">
-        <li className="relative inline-block"><NavLink to="#home"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></NavLink></li>
-        <li className="relative inline-block"><NavLink to="#about"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></NavLink></li>
-        <li className="relative inline-block"><NavLink to="#skill"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Skill</p></NavLink></li>
-        <li className="relative inline-block"><NavLink to="#portfolio"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Portfolio</p></NavLink></li>																				
-        <li className="relative inline-block"><NavLink to="#contact"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Contact</p></NavLink></li>
+        <li className="nav__menu relative inline-block"><a href="#home" className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></a></li>
+        <li className="nav__menu relative inline-block"><a href="#about" className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></a></li>
+        <li className="nav__menu relative inline-block"><a href="#skill" className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Skill</p></a></li>
+        <li className="nav__menu relative inline-block"><a href="#portfolio" className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Portfolio</p></a></li>																				
+        <li className="nav__menu relative inline-block"><a href="#contact" className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Contact</p></a></li>
       </ul>
 
       <div onClick={() => setTheme(colorTheme)} className="toggle my-2 ml-2 h-5 w-5">
