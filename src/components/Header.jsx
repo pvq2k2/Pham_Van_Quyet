@@ -6,11 +6,11 @@ const Header = () => {
   const [colorTheme, setTheme] = useDarkMode();
   const [navToggle, setNavToggle] = useState(true);
   /*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll('.nav__link');
 function linkAction(){
-  setNavToggle(!navToggle)
+  setNavToggle(false);
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+Array.from(navLink).forEach(n => n.addEventListener('click', linkAction))
   return (
 <header id="header">
 <div className="fixed right-0 left-0 z-[1030] bg-slate-50 dark:bg-[#1F2235] transition duration-500">
@@ -57,11 +57,11 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
     ? "fixed top-[50px] right-[-100%] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#0b0d15] transition-all duration-500 shadow-lg"
     : "fixed top-[50px] right-[0] w-[320px] h-full p-8 bg-slate-100 dark:bg-[#0b0d15] transition-all duration-500 shadow-lg"}>
       <ul className="nav navbar-nav navbar-right">
-        <li className="nav__menu block relative"><a href="#home" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></a></li>
-        <li className="nav__menu block relative"><a href="#about" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></a></li>
-        <li className="nav__menu block relative"><a to="#skill" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Skill</p></a></li>
-        <li className="nav__menu block relative"><a to="#portfolio" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Portfolio</p></a></li>																				
-        <li className="nav__menu block relative"><a to="#contact" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="nav__link text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Contact</p></a></li>
+        <li className="nav__link block relative"><a href="#home" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Home</p></a></li>
+        <li className="nav__link block relative"><a href="#about" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">About</p></a></li>
+        <li className="nav__link block relative"><a href="#skill" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Skill</p></a></li>
+        <li className="nav__link block relative"><a href="#portfolio" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Portfolio</p></a></li>
+        <li className="nav__link block relative"><a href="#contact" className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"><p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">Contact</p></a></li>
       </ul>
           </div>
     </div>
