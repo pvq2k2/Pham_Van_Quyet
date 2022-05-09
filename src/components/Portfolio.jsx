@@ -4,7 +4,7 @@ const Portfolio = () => {
   return (
       <section className="pt-20 pb-40 bg-slate-50 dark:bg-[#1F2235] transition duration-500" id="portfolio">
           <h2 className="relative text-3xl text-left sm:text-center text-[#3e6ff4] mt-4 mb-8 font-extrabold pl-4 sm:pl-0
-          after:absolute after:w-16 after:h-[3px] after:left-0 after:right-0 after:m-0 after:ml-4 after:top-10 after:bg-[#3e6ff4] sm:after:m-auto sm:after:ml-0">Portfolio</h2>
+          after:absolute after:w-16 after:h-[3px] after:left-4 after:right-0 after:top-10 after:bg-[#3e6ff4] sm:after:left-0 sm:after:m-auto">Portfolio</h2>
           <div className="mx-auto pt-10 xl:w-[1200px] sm:px-10">
             <div className="group gap-y-8 text-left grid grid-cols-1 sm:grid-cols-2 items-center py-10 px-4 rounded-lg shadow-xl sm:shadow-none sm:border-b-2 sm:border-dashed sm:border-[#3e6ff4]">
                 <div className="box-border overflow-hidden">
