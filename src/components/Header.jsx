@@ -28,15 +28,11 @@ const Header = () => {
   Array.from(navLink).forEach((n) => n.addEventListener("click", linkAction));
   return (
     <header id="header">
-      <div
-        className="header fixed right-0 left-0 z-[1030] bg-slate-50 dark:bg-[#1F2235] transition duration-500"
-      >
+      <div className="header fixed right-0 left-0 z-[1030] bg-slate-50 dark:bg-[#1F2235] transition duration-500">
         <div className="flex justify-between mx-auto px-4 xl:w-[1200px]">
           <div className="logo h-[50px] pt-3 sm:pt-7">
             <Link to="/">
-              <p
-                className="sm:text-[30px] text-2xl font-extrabold uppercase text-[#3e6ff4]"
-              >
+              <p className="sm:text-[30px] text-2xl font-extrabold uppercase text-[#3e6ff4]">
                 QUYET
               </p>
             </Link>

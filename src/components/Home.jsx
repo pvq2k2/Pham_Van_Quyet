@@ -96,7 +96,14 @@ const Home = () => {
               </a>
             </li>
           </ul>
-          <div className="sm:hidden top-[55%] absolute right-0 bottom-0 translate-x-0 w-[220px]">
+          <div
+            data-aos="fade-down"
+            data-aos-offset="0"
+            data-aos-delay="200"
+            data-aos-easing="ease-out-cubic"
+            data-aos-anchor-placement="top-bottom"
+            className="sm:hidden top-[55%] absolute right-0 bottom-0 translate-x-0 w-[220px]"
+          >
             <svg
               className="fill-[#3e6ff4]"
               viewBox="0 0 479 467"
