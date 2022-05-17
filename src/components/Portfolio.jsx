@@ -24,7 +24,7 @@ const Portfolio = () => {
       <div
         data-aos="fade-right"
         data-aos-offset="0"
-        data-aos-delay="20"
+        data-aos-delay="50"
         data-aos-easing="ease-in-sine"
         data-aos-anchor-placement="top-bottom"
         className="mx-auto pt-10 xl:w-[1200px] sm:px-10"
