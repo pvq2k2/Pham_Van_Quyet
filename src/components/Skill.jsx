@@ -12,7 +12,7 @@ const Skill = () => {
   }, []);
   return (
     <section
-      className="pt-20 pb-20 bg-slate-50 dark:bg-[#1F2235] transition duration-500"
+      className="pt-28 pb-20 bg-slate-50 dark:bg-[#1F2235] transition duration-500"
       id="skill"
     >
       <h2

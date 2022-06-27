@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import useDarkMode from "../hook/useDarkMode";
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
   /*==================== REMOVE MENU MOBILE ====================*/
   const navLink = document.querySelectorAll(".nav__link");
   function linkAction() {
-    setNavToggle(false);
+    setNavToggle(!navToggle);
   }
   Array.from(navLink).forEach((n) => n.addEventListener("click", linkAction));
   return (
@@ -31,8 +31,8 @@ const Header = () => {
       <div className="header fixed right-0 left-0 z-[1030] bg-slate-50 dark:bg-[#1F2235] transition duration-500">
         <div className="flex justify-between mx-auto px-4 xl:w-[1200px]">
           <div className="logo h-[50px] pt-3 sm:pt-7">
-            <Link to="/">
-              <p className="sm:text-[30px] text-2xl font-extrabold uppercase text-[#3e6ff4]">
+            <Link to="home" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}>
+              <p className="sm:text-[30px] text-2xl font-extrabold cursor-pointer uppercase text-[#3e6ff4]">
                 QUYET
               </p>
             </Link>
@@ -77,54 +77,54 @@ const Header = () => {
                   >
                     <ul className="nav navbar-nav navbar-right">
                       <li className="nav__link block relative">
-                        <a
-                          href="#home"
-                          className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                        <Link
+                          to="home" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
+                          className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
                         >
                           <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                             Home
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__link block relative">
-                        <a
-                          href="#about"
-                          className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                        <Link
+                          to="about" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
+                          className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
                         >
                           <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                             About
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__link block relative">
-                        <a
-                          href="#skill"
-                          className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                        <Link
+                          to="skill" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
+                          className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
                         >
                           <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                             Skill
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__link block relative">
-                        <a
-                          href="#portfolio"
-                          className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                        <Link
+                          to="portfolio" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
+                          className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
                         >
                           <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                             Portfolio
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__link block relative">
-                        <a
-                          href="#contact"
-                          className="hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                        <Link
+                          to="contact" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
+                          className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:w-20 hover:after:left-4 hover:after:right-0 hover:after:top-10 hover:after:bg-[#3e6ff4]"
                         >
                           <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                             Contact
                           </p>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -138,54 +138,62 @@ const Header = () => {
           >
             <ul className="nav navbar-nav navbar-right inline-block">
               <li className="nav__menu relative inline-block">
-                <a
-                  href="#home"
-                  className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                <Link
+                  to="home" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
+                  className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
                 >
                   <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                     Home
                   </p>
-                </a>
+                </Link>
               </li>
               <li className="nav__menu relative inline-block">
-                <a
-                  href="#about"
-                  className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                <Link
+                  to="about"
+                  activeClass="after:absolute after:h-[3px] after:left-0 after:right-0 after:m-auto after:top-10 after:bg-[#3e6ff4]"
+                  spy={true} smooth={true} offset={-83} duration={1000}
+                  className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
                 >
                   <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                     About
                   </p>
-                </a>
+                </Link>
               </li>
               <li className="nav__menu relative inline-block">
-                <a
-                  href="#skill"
-                  className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                <Link
+                  to="skill" 
+                  activeClass="after:absolute after:h-[3px] after:left-0 after:right-0 after:m-auto after:top-10 after:bg-[#3e6ff4]"
+                  spy={true} smooth={true} offset={-83} duration={1000}
+                  className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
                 >
                   <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                     Skill
                   </p>
-                </a>
+                </Link>
               </li>
               <li className="nav__menu relative inline-block">
-                <a
-                  href="#portfolio"
-                  className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                <Link
+                  to="portfolio" 
+                  activeClass="after:absolute after:h-[3px] after:left-0 after:right-0 after:m-auto after:top-10 after:bg-[#3e6ff4]" 
+                  spy={true} smooth={true} offset={-83} duration={1000}
+                  className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
                 >
                   <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                     Portfolio
                   </p>
-                </a>
+                </Link>
               </li>
               <li className="nav__menu relative inline-block">
-                <a
-                  href="#contact"
-                  className="hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
+                <Link
+                  to="contact" 
+                  activeClass="after:absolute after:h-[3px] after:left-0 after:right-0 after:m-auto after:top-10 after:bg-[#3e6ff4]"
+                  spy={true} smooth={true} offset={-83} duration={1000}
+                  className="cursor-pointer hover:after:absolute hover:after:h-[3px] hover:after:left-0 hover:after:right-0 hover:after:m-auto hover:after:top-10 hover:after:bg-[#3e6ff4]"
                 >
                   <p className="text-[#3e6ff4] text-[15px] font-semibold uppercase py-[10px] px-[15px]">
                     Contact
                   </p>
-                </a>
+                </Link>
               </li>
             </ul>
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,14 +37,14 @@ const Home = () => {
             data-aos-delay="50"
             data-aos-easing="ease-in-out"
             data-aos-anchor-placement="top-bottom"
-            className="btn-contact"
+            className="btn-contact cursor-pointer"
           >
-            <a
-              href="#contact"
+            <Link
+              to="contact" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
               className="inline-block bg-[#3e6ff4] text-white mt-4 py-3 px-9 font-semibold rounded-lg transition duration-300 hover:shadow-lg hover:shadow-blue-500/50"
             >
               Contact
-            </a>
+            </Link>
           </div>
           <ul className="mt-10">
             <li
