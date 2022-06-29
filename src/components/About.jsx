@@ -12,7 +12,7 @@ const About = () => {
   }, []);
   return (
     <section
-      className="pt-20 pb-40 bg-slate-50 dark:bg-[#1F2235] transition duration-500"
+      className="pt-20 pb-1 bg-slate-50 dark:bg-[#1F2235] transition duration-500"
       id="about"
     >
       <h2
@@ -42,23 +42,49 @@ const About = () => {
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
             data-aos-anchor-placement="top-bottom"
-            className="mb-8 font-extrabold text-3xl dark:text-white"
+            className="font-extrabold text-3xl dark:text-white pb-4"
           >
-            I'am Quyet
+            About me
           </h2>
-          <p
+          <ul
             data-aos="fade-down"
             data-aos-offset="0"
-            data-aos-delay="200"
+            data-aos-delay="50"
             data-aos-easing="ease-in-out"
             data-aos-anchor-placement="top-bottom"
-            className="dark:text-white"
+            className="flex gap-3 flex-col gap-x-10"
           >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates
-            soluta, aut earum nemo recusandae cumque perferendis! Recusandae
-            alias accusamus atque.
-          </p>
+            <li className="flex py-3 gap-3 dark:text-white">
+              <span className="font-extrabold">Name: </span>
+              <p>Pham Van Quyet</p>
+            </li>
+            <li className="flex py-3 gap-3 dark:text-white">
+              <span className="font-extrabold">Date of birth: </span>
+              <p>September 23, 2002</p>
+            </li>
+            <li className="flex py-3 gap-3 dark:text-white">
+              <span className="font-extrabold">Address: </span>
+              <p>Chuong My, Hanoi</p>
+            </li>
+            <li className="flex py-3 gap-3 dark:text-white">
+              <span className="font-extrabold">Email: </span>{" "}
+              <a
+                href="mailto:vanquyet2392002@gmail.com"
+                className="pl-1 hover:underline hover:text-[#3e6ff4]"
+              >
+                vanquyet2392002@gmail.com
+              </a>
+            </li>
+            <li className="flex py-3 gap-3 dark:text-white">
+              <span className="font-extrabold">Phone: </span>{" "}
+              <a
+                href="tel:+84348228722"
+                className="pl-1 hover:underline hover:text-[#3e6ff4]"
+              >
+                +84 348 228 722
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

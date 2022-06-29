@@ -44,7 +44,7 @@ const Contact = () => {
             >
               <i className="bx bxs-map mr-3 dark:text-white" />
               <span className="dark:text-white">
-                Address: Ha Noi City, Vietnam
+                Address: Chuong My, Hanoi
               </span>
             </li>
             <li

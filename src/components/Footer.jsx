@@ -9,11 +9,11 @@ const Footer = () => {
         </p>
         <div className="mb-8">
           <a
-            href="https://www.facebook.com/lllvpvqvlll"
+            href="https://www.linkedin.com/in/quyet-pham-4b5350243/"
             target="_blank"
             className="text-2xl text-white px-4 transition duration-300 hover:text-[#3e6ff4]"
           >
-            <i className="bx bxl-facebook" />
+            <i class="bx bxl-linkedin"></i>
           </a>
           <a
             href="https://t.me/lllvpvqvlll"

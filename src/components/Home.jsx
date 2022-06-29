@@ -40,7 +40,12 @@ const Home = () => {
             className="btn-contact cursor-pointer"
           >
             <Link
-              to="contact" activeClass="active" spy={true} smooth={true} offset={0} duration={1000}
+              to="contact"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
               className="inline-block bg-[#3e6ff4] text-white mt-4 py-3 px-9 font-semibold rounded-lg transition duration-300 hover:shadow-lg hover:shadow-blue-500/50"
             >
               Contact
@@ -56,11 +61,11 @@ const Home = () => {
               className="block mb-3 sm:inline-block sm:mr-3"
             >
               <a
-                href="https://www.facebook.com/lllvpvqvlll"
+                href="https://www.linkedin.com/in/quyet-pham-4b5350243/"
                 target="_blank"
                 className="text-[#3e6ff4] text-base text-center leading-10 border border-[#3e6ff4] w-10 h-10 rounded-full inline-block transition duration-500 hover:bg-[#3e6ff4] hover:text-white"
               >
-                <i className="bx bxl-facebook" />
+                <i class="bx bxl-linkedin"></i>
               </a>
             </li>
             <li
