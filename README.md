@@ -17,7 +17,6 @@ $ cd portfolio-react
 ### 2. Run the app
 
 ```
-
 $ npm run server
 ```
 
