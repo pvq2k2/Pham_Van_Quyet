@@ -65,7 +65,7 @@ const Home = () => {
                 target="_blank"
                 className="text-[#3e6ff4] text-base text-center leading-10 border border-[#3e6ff4] w-10 h-10 rounded-full inline-block transition duration-500 hover:bg-[#3e6ff4] hover:text-white"
               >
-                <i class="bx bxl-linkedin"></i>
+                <i className="bx bxl-linkedin"></i>
               </a>
             </li>
             <li

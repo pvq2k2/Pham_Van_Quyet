@@ -13,7 +13,7 @@ const Footer = () => {
             target="_blank"
             className="text-2xl text-white px-4 transition duration-300 hover:text-[#3e6ff4]"
           >
-            <i class="bx bxl-linkedin"></i>
+            <i className="bx bxl-linkedin"></i>
           </a>
           <a
             href="https://t.me/lllvpvqvlll"
